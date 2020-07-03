@@ -3,7 +3,7 @@ MAINTAINER Scott Mebberson <scott@scottmebberson.com>
 
 # Install nginx
 RUN echo "http://dl-4.alpinelinux.org/alpine/v3.12/main" >> /etc/apk/repositories && \
-    apk add --update nginx=1.18.0 && \
+    apk add --update nginx=1.18.0-r0 && \
     rm -rf /var/cache/apk/* && \
     chown -R nginx:www-data /var/lib/nginx
 
