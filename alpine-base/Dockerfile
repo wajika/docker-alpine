@@ -1,4 +1,4 @@
-FROM alpine:3.9
+FROM alpine:3.12
 MAINTAINER Scott Mebberson (https://github.com/smebberson/docker-alpine)
 
 # Add s6-overlay
