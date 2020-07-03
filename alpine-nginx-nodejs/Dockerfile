@@ -1,9 +1,9 @@
-FROM smebberson/alpine-nginx:3.0.0
+FROM wajika/alpine-nginx:latest
 MAINTAINER Scott Mebberson <scott@scottmebberson.com>
 
-ENV NODE_VERSION=v6.4.0 NPM_VERSION=3
+ENV NODE_VERSION=12.17.0  NPM_VERSION=3
 
-RUN echo "http://dl-4.alpinelinux.org/alpine/v3.2/main" >> /etc/apk/repositories && \
+RUN echo "http://dl-4.alpinelinux.org/alpine/v3.12/main" >> /etc/apk/repositories && \
     apk add --update git curl make gcc g++ python linux-headers libgcc libstdc++ binutils-gold && \
     curl -sSL https://nodejs.org/dist/${NODE_VERSION}/node-${NODE_VERSION}.tar.gz | tar -xz && \
     cd /node-${NODE_VERSION} && \
