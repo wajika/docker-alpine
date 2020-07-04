@@ -1,10 +1,10 @@
 FROM wajika/alpine-nginx:latest
 MAINTAINER Scott Mebberson <scott@scottmebberson.com>
 
-ENV NODE_VERSION=12.17.0  NPM_VERSION=3
+ENV NODE_VERSION=v9.8.0  NPM_VERSION=6
 
 RUN echo "http://dl-4.alpinelinux.org/alpine/v3.12/main" >> /etc/apk/repositories && \
-    apk add --update git curl make gcc g++ python linux-headers libgcc libstdc++ binutils-gold && \
+    apk add --update git curl make gcc g++ python2 linux-headers libgcc libstdc++ binutils-gold && \
     curl -sSL https://nodejs.org/dist/${NODE_VERSION}/node-${NODE_VERSION}.tar.gz | tar -xz && \
     cd /node-${NODE_VERSION} && \
     ./configure --prefix=/usr --without-snapshot && \
