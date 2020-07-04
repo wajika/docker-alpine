@@ -1,7 +1,7 @@
-FROM smebberson/alpine-base:3.2.0
+FROM wajika/alpine-base:latest
 MAINTAINER Scott Mebberson <scott@scottmebberson.com>
 
-ENV CONSUL_VERSION=0.8.5 \
+ENV CONSUL_VERSION=1.8.0 \
     CONSUL_DOMAIN=consul \
     CONSUL_DATA_DIR=/data/consul \
     CONSUL_CONFIG_DIR=/etc/consul/conf.d/bootstrap \
