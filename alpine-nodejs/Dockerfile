@@ -1,7 +1,7 @@
 FROM wajika/alpine-base:latest
 MAINTAINER Scott Mebberson <scott@scottmebberson.com>
 
-ENV NODE_VERSION=v12.8.0 NPM_VERSION=6
+ENV NODE_VERSION=v9.8.0 NPM_VERSION=6
 
 RUN addgroup node && \
     adduser -D -g "" -s /bin/sh -G node node && \
