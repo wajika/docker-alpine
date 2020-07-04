@@ -2,7 +2,9 @@ os: linux
 dist: bionic
 
 services: docker
-
+branches:
+  only:
+  - master
 
 before_install:
   - cd alpine-nginx-nodejs
