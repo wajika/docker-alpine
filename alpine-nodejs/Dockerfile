@@ -6,7 +6,7 @@ ENV NODE_VERSION=v9.8.0 NPM_VERSION=6
 RUN addgroup node && \
     adduser -D -g "" -s /bin/sh -G node node && \
     apk upgrade --update && \
-    apk add --update git curl make gcc g++ python2-2.7.18-r0 linux-headers libgcc libstdc++ && \
+    apk add --update git curl make gcc g++ python2 linux-headers libgcc libstdc++ && \
     curl -sSL https://nodejs.org/dist/${NODE_VERSION}/node-${NODE_VERSION}.tar.gz | tar -xz && \
     cd /node-${NODE_VERSION} && \
     ./configure --prefix=/usr --without-snapshot && \
