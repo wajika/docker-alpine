@@ -5,9 +5,9 @@ services: docker
 
 
 before_install:
-  - cd alpine-nodejs
+  - cd alpine-nginx-nodejs
 
 script:
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-- docker build -t wajika/alpine-nodejs:latest .
-- docker push wajika/alpine-nodejs:latest
+- docker build -t wajika/alpine-nginx-nodejs:latest .
+- docker push wajika/alpine-nginx-nodejs:latest
