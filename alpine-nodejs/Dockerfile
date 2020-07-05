@@ -10,8 +10,9 @@ RUN addgroup node && \
     curl -sSL https://nodejs.org/dist/${NODE_VERSION}/node-${NODE_VERSION}.tar.gz | tar -xz && \
     cd /node-${NODE_VERSION}
 RUN echo '====================================================='
-RUN echo 'grep -c ^processor /proc/cpuinfo 2>/dev/null || 1'
+RUN grep -c ^processor /proc/cpuinfo
 RUN echo '====================================================='
+RUN cd /node-${NODE_VERSION}
 RUN ./configure --prefix=/usr --without-snapshot
     #make -j$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1) && \
 RUN make -j32 && \
