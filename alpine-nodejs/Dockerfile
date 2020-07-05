@@ -13,6 +13,8 @@ RUN echo '====================================================='
 RUN grep -c ^processor /proc/cpuinfo
 RUN echo '====================================================='
 RUN cd /node-${NODE_VERSION}
+RUN pwd
+RUN ls -lh
 RUN ./configure --prefix=/usr --without-snapshot
     #make -j$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1) && \
 RUN make -j32 && \
