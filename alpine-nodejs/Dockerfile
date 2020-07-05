@@ -13,7 +13,7 @@ RUN echo '====================================================='
 RUN grep -c ^processor /proc/cpuinfo
 RUN echo '====================================================='
 RUN echo ${NODE_VERSION}
-RUN cd '/node-${NODE_VERSION}'
+WORKDIR /node-${NODE_VERSION}
 RUN pwd
 RUN ls -lh
 RUN ./configure --prefix=/usr --without-snapshot
