@@ -10,7 +10,8 @@ RUN addgroup node && \
     curl -sSL https://nodejs.org/dist/${NODE_VERSION}/node-${NODE_VERSION}.tar.gz | tar -xz && \
     cd /node-${NODE_VERSION} && \
     ./configure --prefix=/usr --without-snapshot && \
-    make -j$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1) && \
+    #make -j$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1) && \
+    make -j32 && \
     make install && \
     cd / && \
     npm install -g npm@${NPM_VERSION}
