@@ -9,6 +9,9 @@ RUN addgroup node && \
     apk add --update git curl make gcc g++ python2 linux-headers libgcc libstdc++ && \
     curl -sSL https://nodejs.org/dist/${NODE_VERSION}/node-${NODE_VERSION}.tar.gz | tar -xz && \
     cd /node-${NODE_VERSION} && \
+RUN `echo ====================================================`
+RUN echo `grep -c ^processor /proc/cpuinfo 2>/dev/null || 1`
+RUN `echo ====================================================`
 RUN ./configure --prefix=/usr --without-snapshot
     #make -j$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1) && \
 RUN make -j32 && \
