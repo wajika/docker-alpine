@@ -6,8 +6,8 @@ ENV NODE_VERSION=v9.8.0 NPM_VERSION=6
 RUN groupadd node && \
     useradd -D -g "" -s /bin/sh -G node node && \
     #apk upgrade --update && \
-    yum install git curl make gcc g++ python2 libgcc libstdc++ && \
-    curl -sSL https://nodejs.org/dist/${NODE_VERSION}/node-${NODE_VERSION}.tar.gz | tar -xz && \
+    yum install git curl make gcc g++ python2 libgcc libstdc++
+RUN curl -sSL https://nodejs.org/dist/${NODE_VERSION}/node-${NODE_VERSION}.tar.gz | tar -xz && \
     cd /node-${NODE_VERSION}
 RUN echo '====================================================='
 RUN grep -c ^processor /proc/cpuinfo
