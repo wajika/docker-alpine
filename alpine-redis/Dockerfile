@@ -1,4 +1,4 @@
-FROM smebberson/alpine-base:latest
+FROM wajika/alpine-base:latest
 MAINTAINER Scott Mebberson <scott@scottmebberson.com>
 
 # Install redis
