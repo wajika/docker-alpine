@@ -1,7 +1,7 @@
-FROM smebberson/alpine-consul-base:4.2.0
+FROM wajika/alpine-consul-base:latest
 MAINTAINER Scott Mebberson <scott@scottmebberson.com>
 
-ENV NODE_VERSION=v6.11.0 NPM_VERSION=3
+ENV NODE_VERSION=v9.8.0 NPM_VERSION=6
 
 RUN apk upgrade --update --no-cache && \
     apk add --update --no-cache git curl make gcc g++ python linux-headers libgcc libstdc++ binutils-gold && \
