@@ -3,7 +3,7 @@ MAINTAINER Scott Mebberson <scott@scottmebberson.com>
 
 # Install redis
 RUN echo "http://dl-4.alpinelinux.org/alpine/v3.12/main" >> /etc/apk/repositories && \
-    apk add --update redis=redis-5.0.9-r0 && \
+    apk add --update redis=5.0.9-r0 && \
     rm -rf /var/cache/apk/* && \
     mkdir /data && \
     chown -R redis:redis /data && \
