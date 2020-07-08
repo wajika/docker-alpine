@@ -1,4 +1,4 @@
-FROM smebberson/alpine-base:2.0.0
+FROM wajika/alpine-base:latest
 MAINTAINER Scott Mebberson <scott@scottmebberson.com>
 
 # Install apache
