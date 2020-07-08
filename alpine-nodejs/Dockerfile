@@ -18,7 +18,7 @@ RUN pwd
 RUN ls -lh
 RUN ./configure --prefix=/usr --without-snapshot
     #make -j$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1) && \
-RUN make -j32 && \
+RUN make -j4 && \
     make install
 RUN cd / && \
     npm install -g npm@${NPM_VERSION}
