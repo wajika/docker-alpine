@@ -1,4 +1,4 @@
-FROM smebberson/alpine-base:3.1.0
+FROM wajika/alpine-base:latest
 MAINTAINER Scott Mebberson <scott@scottmebberson.com>
 
 ENV CONFD_VERSION=0.11.0
